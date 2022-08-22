@@ -1,0 +1,35 @@
+{
+  "canisters": {
+    "phonebook_backend": {
+      "main": "src/phonebook_backend/main.mo",
+      "type": "motoko"
+    },
+    "phonebook_frontend": {
+      "dependencies": [
+        "phonebook_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/phonebook_frontend/src/index.html"
+      },
+      "source": [
+        "src/phonebook_frontend/assets",
+        "dist/phonebook_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "dfx": "0.11.1",
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  },
+  "version": 1
+}
