@@ -11,8 +11,8 @@
 # .dfx/
 
 # generated files
-src/declarations/
+# src/declarations/
 
 # frontend code
 node_modules/
-dist/
+# dist/

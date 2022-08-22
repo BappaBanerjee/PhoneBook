@@ -1,0 +1,18 @@
+type Phone = text;
+type Name = text;
+type Entry = 
+ record {
+   desc: text;
+   phone: Phone;
+ };
+service : {
+  deleteContact: (Name) -> (opt Entry);
+  entries: () -> (vec record {
+                        Name;
+                        Entry;
+                      }) query;
+  getSize: () -> (nat) query;
+  insert: (Name, Entry) -> (text);
+  lookup: (Name) -> (opt Entry) query;
+  updateContact: (Name, Entry) -> (opt Entry);
+}
